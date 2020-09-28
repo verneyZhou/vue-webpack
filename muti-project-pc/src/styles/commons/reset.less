@@ -1,0 +1,84 @@
+// 基础样式格式化
+
+*::after,
+*::before,
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-style: normal;
+	font-weight: normal;
+	box-shadow: none;
+	border-radius: 0;
+	border: none;
+	outline: none;
+}
+
+html {
+	background-color: #F9FAFC;
+}
+
+body {
+	font-family: 'Avenir',-apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+	width: 100%;
+	min-height: 100vh;
+	margin: 0 auto;
+}
+
+input:-webkit-autofill {
+	box-shadow: 0 0 0px 1000px white inset !important;
+}
+
+ul {
+	list-style: none
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover,
+a:visited,
+a:link,
+a:active {
+	color: #000000;
+}
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+p {
+	margin-block-start: 0;
+	margin-block-end: 0;
+}
+h4 {
+  display: block;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  font-weight: bold;
+}
+img{
+	font-size: 0;
+}
+
+#root {
+	width: 100%;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+input[type=tel],
+input[type=button],
+input[type=text],
+input[type=input],
+input[type=password] {
+	-webkit-appearance: none;
+	outline: none
+}

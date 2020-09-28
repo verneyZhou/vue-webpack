@@ -1,0 +1,20 @@
+// .babelrc文件需要的配置项主要有预设(presets)和插件(plugins)。
+{
+    "presets": [ // 预设(presets)的作用是为babel安装指定的插件
+      ["@babel/preset-env", {
+        "modules": "commonjs", // 将modules编译成commonjs
+        "targets": {
+          "browsers": ["> 1%", "last 2 versions", "not ie <= 8"], // 浏览器列表
+          "node": "current" // 指定当前node版本
+        },
+        "debug":true, // 默认false 编译时是否去掉console.log
+         // a.不引入polyfill；默认，可在src/index.js入口直接引入babel-polyfill(常用于SPA应用配置)
+        "useBuiltIns": false
+      }]
+    ],
+    // presets是插件plugins的预设，也就是说直接需要不需要的插件一起引入，如果不想使用presets，可以单独使用plugins对某个功能进行单独的引入。另外，有一些方法是presets中不提供的，如果要使用就需要单独引用了
+    "plugins": [ 
+        // "@babel/plugin-transform-runtime", // 解决编译中产生的重复的工具函数，减小代码体积。
+        "@babel/plugin-syntax-dynamic-import" // 对一些组件进行懒加载
+    ]
+  }
